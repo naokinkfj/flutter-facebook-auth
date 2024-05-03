@@ -84,11 +84,13 @@ class FacebookAuth {
     List<String> permissions = const ['email', 'public_profile'],
     LoginBehavior loginBehavior = LoginBehavior.nativeWithFallback,
     LoginTracking loginTracking = LoginTracking.limited,
+    String? nonce,
   }) =>
       _authPlatform.login(
         permissions: permissions,
         loginBehavior: loginBehavior,
         loginTracking: loginTracking,
+        nonce: nonce,
       );
 
   /// call this method (ONLY FOR WEB) to initialize the facebook javascript sdk

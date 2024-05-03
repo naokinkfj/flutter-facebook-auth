@@ -100,6 +100,7 @@ class FacebookAuthDesktopPlugin extends FacebookAuthPlatform {
     List<String> permissions = const ['email', 'public_profile'],
     LoginBehavior loginBehavior = LoginBehavior.dialogOnly,
     LoginTracking loginTracking = LoginTracking.enabled,
+    String? nonce,
   }) async {
     assert(
       _appId.isNotEmpty,
